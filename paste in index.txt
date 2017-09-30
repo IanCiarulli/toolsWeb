@@ -1,5 +1,5 @@
 <!-- FAAAAAAASSSSSTT -->
-  
+
 <link type="text/css" rel="stylesheet" href="fast/css/font-awesome.min.css" />
 
 <link type="text/css" rel="stylesheet" href="fast/css/fast.css" />

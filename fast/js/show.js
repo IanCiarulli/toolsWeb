@@ -4,14 +4,14 @@ function devShow(text) {
     $("#devShow").remove();
 
     if ((text != "") && (text != undefined)) {
-        var cap = "<div class=\u0022fixed bottom0 right0 z-index100 height-auto min-height40px bg6-black father padding15px\u0022 id=\u0022devShow\u0022 onclick=\u0022$('#devShow').remove()\u0022>" +
+        var cap = "<div class=\u0022fixed font-fastWeb z-index9999 c-white bottom0 right0 z-index100 height-auto min-height40px bg6-black father padding15px\u0022 id=\u0022devShow\u0022 onclick=\u0022$('#devShow').remove()\u0022>" +
             text +
             '</div>';
         $("body").append(cap);
     }
 }
 
-function show(text, type, solid, btn1, btn2, btn3) {
+function show(text, icon, solid, btn1, btn2, btn3) {
 
     endCap();
 
@@ -23,8 +23,8 @@ function show(text, type, solid, btn1, btn2, btn3) {
 
     if ((btn1 == undefined) && (btn2 == undefined) && (btn3 == undefined)) {
         addContainerTextImg();
-        if ((type != undefined) && (type != "")) {
-            addIcon(type);
+        if ((icon != undefined) && (icon != "")) {
+            addIcon(icon);
         }
         addText(text);
         addContainerButton();
@@ -34,8 +34,8 @@ function show(text, type, solid, btn1, btn2, btn3) {
 
     } else {
         addContainerTextImg();
-        if ((type != undefined) && (type != "")) {
-            addIcon(type);
+        if ((icon != undefined) && (icon != "")) {
+            addIcon(icon);
         }
         addText(text);
         addContainerButton();
@@ -56,6 +56,10 @@ function show(text, type, solid, btn1, btn2, btn3) {
         }
 
         ultShow = text;
+    }
+
+    if ((btn2 == undefined) && (btn3 == undefined)) {
+        $("#capIn").parent().attr("onclick", "endCap()");
     }
 }
 
@@ -119,7 +123,7 @@ function addCap(opac, color, id) {
 
     var cap =
 
-        "<div class=\u0022father fastStyle cap z-index9999 " + color + " \u0022 id=\u0022cap" + id + "\u0022>" +
+        "<div class=\u0022father fastStyle cap z-index9999 " + color + " \u0022 id=\u0022cap" + id + "\u0022 onclick=\u0022 \u0022>" +
         "<div class=\u0022margin20px flex flex-column c-white son z-index9999 textCenter font22px \u0022 id=\u0022capIn\u0022>" +
         "</div>" +
         "</div>";
@@ -139,14 +143,14 @@ function addContainerTextImg() {
     $("#capIn").append(cap);
 }
 
-function addIcon(type) {
+function addIcon(icon) {
 
-    if (type == "loading") {
+    if (icon == "loading") {
         var cap = "<div class=\u0022 max-width70px auto padding10px z-index9999 font15px father\u0022> <i class=\u0022fa fa-spinner c-white fa-pulse fa-3x fa-fw margin20px\u0022></i></div>";
         $("#containerTextImgIn").append(cap);
 
     } else {
-        var cap = "<div class=\u0022 auto padding10px z-index9999 father\u0022> <img src=\u0022fast/img/" + type + ".png\u0022></div>";
+        var cap = "<div class=\u0022 auto padding10px z-index9999 father\u0022> <img src=\u0022fast/img/" + icon + ".png\u0022></div>";
         $("#containerTextImgIn").append(cap);
     }
 

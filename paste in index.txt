@@ -1,0 +1,16 @@
+<!-- FAAAAAAASSSSSTT -->
+  
+<link type="text/css" rel="stylesheet" href="fast/css/font-awesome.min.css" />
+
+<link type="text/css" rel="stylesheet" href="fast/css/fast.css" />
+
+<link type="text/css" rel="stylesheet" href="fast/css/colors.min.css" />
+<!---------------------->
+
+<script type="text/javascript" src="fast/js/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript" src="fast/js/show.js"></script>
+<script type="text/javascript" src="fast/js/actionPostShow.js"></script>
+
+<script type="text/javascript" src="fast/js/tools.js"></script>
+<!-- FAAAAAAASSSSSTT -->
